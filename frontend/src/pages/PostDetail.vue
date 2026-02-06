@@ -141,9 +141,7 @@ onMounted(fetchPost);
   /* PostDetail.vue (scoped) */
 
 .page {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 24px 0;
+  padding-bottom: 40px;
 }
 
 .page-header {
@@ -161,11 +159,12 @@ onMounted(fetchPost);
 .title {
   margin: 0;
   font-size: 28px;
+  font-weight: 800;
 }
 
 .desc {
   margin: 6px 0 0;
-  color: #666;
+  color: #6b7280;
 }
 
 .actions {
@@ -176,10 +175,7 @@ onMounted(fetchPost);
 
 /* Content / States */
 .content {
-  padding: 14px;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 14px;
+  /* Wrapper for states, card handles its own style */
 }
 
 .state {
@@ -191,7 +187,7 @@ onMounted(fetchPost);
 }
 
 .state.error {
-  color: #b00020;
+  color: #ef4444;
 }
 
 .state__msg {
@@ -200,10 +196,11 @@ onMounted(fetchPost);
 
 /* Card */
 .card {
-  padding: 16px;
+  padding: 40px;
   background: #fff;
-  border: 1px solid #eee;
-  border-radius: 14px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   max-width: unset;
 }
 
@@ -216,6 +213,7 @@ onMounted(fetchPost);
 .post-title {
   margin: 0;
   font-size: 22px;
+  font-weight: 700;
   line-height: 1.35;
   word-break: break-word;
 }
@@ -225,8 +223,8 @@ onMounted(fetchPost);
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
-  color: #777;
+  font-size: 14px;
+  color: #6b7280;
 }
 
 .meta__item {
@@ -234,20 +232,20 @@ onMounted(fetchPost);
 }
 
 .meta__dot {
-  color: #aaa;
+  color: #d1d5db;
 }
 
 .divider {
   height: 1px;
-  margin: 14px 0;
-  background: #eee;
+  margin: 24px 0;
+  background: #e5e7eb;
 }
 
 .post-content {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #222;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
   white-space: pre-wrap; /* 줄바꿈 유지 */
   word-break: break-word;
   min-height: 200px;
@@ -256,24 +254,25 @@ onMounted(fetchPost);
 /* Buttons */
 .btn {
   height: 36px;
-  padding: 0 12px;
-  border: 1px solid #111;
-  border-radius: 10px;
-  background: #111;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #4f46e5;
   color: #fff;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn.ghost {
-  background: transparent;
-  color: #111;
-  border-color: #ddd;
+  background: #fff;
+  color: #374151;
+  border-color: #d1d5db;
 }
 
 .btn.danger {
-  background: #b00020;
-  border-color: #b00020;
+  background: #ef4444;
+  border-color: #ef4444;
 }
 
 .btn:disabled {
@@ -282,18 +281,17 @@ onMounted(fetchPost);
 }
 
 .btn:hover:not(:disabled) {
-  background: #000;
-  border-color: #000;
+  background: #4338ca;
+  border-color: #4338ca;
 }
 
 .btn.ghost:hover:not(:disabled) {
-  background: #111;
-  color: #fff;
-  border-color: #111;
+  background: #f9fafb;
+  border-color: #9ca3af;
 }
 
 .btn.danger:hover:not(:disabled) {
-  background: #8d001a;
-  border-color: #8d001a;
+  background: #dc2626;
+  border-color: #dc2626;
 }
 </style>

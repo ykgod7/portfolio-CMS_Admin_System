@@ -120,9 +120,7 @@ async function onSubmit() {
 
 <style lang="scss" scoped>
 .page {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 24px 0;
+  padding-bottom: 40px;
 }
 
 .page-header {
@@ -140,11 +138,12 @@ async function onSubmit() {
 .title {
   font-size: 28px;
   margin: 0;
+  font-weight: 800;
 }
 
 .desc {
   margin: 6px 0 0;
-  color: #666;
+  color: #6b7280;
 }
 
 .actions {
@@ -154,10 +153,11 @@ async function onSubmit() {
 }
 
 .content {
-  border: 1px solid #eee;
-  border-radius: 14px;
-  padding: 16px;
+  border: none;
+  border-radius: 16px;
+  padding: 32px;
   background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .form {
@@ -174,31 +174,35 @@ async function onSubmit() {
 
 .label {
   font-size: 14px;
-  color: #333;
-  font-weight: 600;
+  color: #374151;
+  font-weight: 700;
 }
 
 .input {
-  height: 40px;
-  padding: 0 12px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
   outline: none;
+  transition: all 0.2s;
 
   &:focus {
-    border-color: #111;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
   }
 }
 
 .textarea {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
   outline: none;
   resize: vertical;
+  transition: all 0.2s;
 
   &:focus {
-    border-color: #111;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
   }
 }
 
@@ -210,7 +214,7 @@ async function onSubmit() {
 
 .error {
   margin: 2px 0 0;
-  color: #b00020;
+  color: #ef4444;
   font-size: 13px;
 }
 
@@ -223,17 +227,27 @@ async function onSubmit() {
 
 .btn {
   height: 36px;
-  padding: 0 12px;
-  border-radius: 10px;
-  border: 1px solid #111;
-  background: #111;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #4f46e5;
   color: #fff;
+  font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background: #4338ca;
+  }
 
   &.ghost {
-    background: transparent;
-    color: #111;
-    border-color: #ddd;
+    background: #fff;
+    color: #374151;
+    border-color: #d1d5db;
+  }
+  &.ghost:hover:not(:disabled) {
+    background: #f9fafb;
+    border-color: #9ca3af;
   }
 
   &:disabled {

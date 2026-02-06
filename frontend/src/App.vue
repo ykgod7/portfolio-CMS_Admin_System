@@ -59,15 +59,22 @@ function onAdminToggle() {
 </script>
 
 <style lang="scss" scoped>
-.wrap { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+.wrap {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
 .top {
-  max-width: 920px;
-  margin: 20px auto 0;
-  padding: 12px 16px;
+  background-color: #ffffff;
+  height: 64px;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* 로고를 strong 대신 버튼처럼(접근성+클릭) */
@@ -75,24 +82,33 @@ function onAdminToggle() {
   font-weight: 700;
   font-size: 16px;
   border: none;
-  background: transparent;
+  background: transparent;  
   cursor: pointer;
   padding: 0;
+  color: #4f46e5;
 }
-.logo:hover { text-decoration: underline; }
+.logo:hover { opacity: 0.8; }
 
 .right { display: flex; gap: 10px; align-items: center; }
-.user { color: #555; font-size: 14px; }
+.user { color: #4b5563; font-size: 14px; font-weight: 500; }
 .header-btn {
   padding: 8px 10px;
-  border: 1px solid #333;
-  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
   background: white;
+  color: #374151;
+  font-size: 13px;
   cursor: pointer;
+  transition: all 0.2s;
+}
+.header-btn:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
 }
 .main {
-  max-width: 920px;
-  margin: 16px auto;
+  max-width: 1024px;
+  margin: 32px auto;
+  padding: 0 24px;
 }
 
 *,

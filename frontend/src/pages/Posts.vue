@@ -115,8 +115,7 @@ watch(page, () => fetchPosts());
 <style lang="scss" scoped>
 .page {
   width: 100%;  
-  margin: 0 auto;
-  padding: 24px 0;
+  padding-bottom: 40px;
 
   &-header {
     display: flex;
@@ -130,11 +129,13 @@ watch(page, () => fetchPosts());
 .title {
   margin: 0;
   font-size: 28px;
+  font-weight: 800;
+  color: #111827;
 }
 
 .desc {
   margin: 6px 0 0;
-  color: #666;
+  color: #6b7280;
 }
 
 .actions {
@@ -177,10 +178,8 @@ watch(page, () => fetchPosts());
 }
 
 .content {
-  padding: 14px;
-  border: 1px solid #eee;
-  border-radius: 14px;
-  background: #fff;
+  /* Remove default container style for cleaner list look */
+  margin-top: 20px;
 }
 
 .state {
@@ -198,7 +197,7 @@ watch(page, () => fetchPosts());
 .list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -208,18 +207,24 @@ watch(page, () => fetchPosts());
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  border: 1px solid #eee;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   &:hover {
-    border-color: #ddd;
+    border-color: #d1d5db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   &-title {
     margin: 0;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #111827;
   }
 
   &-meta {
@@ -227,14 +232,14 @@ watch(page, () => fetchPosts());
     align-items: center;
     gap: 8px;
     margin: 6px 0 0;
-    font-size: 13px;
-    color: #777;
+    font-size: 14px;
+    color: #6b7280;
   }
 }
 
 .chev {
   font-size: 20px;
-  color: #999;
+  color: #d1d5db;
 }
 
 .pager {
@@ -242,7 +247,7 @@ watch(page, () => fetchPosts());
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin-top: 14px;
+  margin-top: 24px;
 
   &-text {
     color: #666;
