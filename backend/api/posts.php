@@ -20,7 +20,7 @@ if ($method === 'GET') {
   $page = max(1, (int)($_GET['page'] ?? 1));
   $size = min(50, (int)($_GET['size'] ?? 20));
   $offset = ($page - 1) * $size;
-  $include_deleted = (int)$_GET['include_deleted'] ?? 0;
+  $include_deleted = (int)($_GET['include_deleted'] ?? 0);
 
   $whereParts  = [];
   $params = [];

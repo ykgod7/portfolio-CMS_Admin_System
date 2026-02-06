@@ -1,6 +1,6 @@
 <?php
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-$allowed = ['http://localhost:5173']; // Vite 기본 주소
+$allowed = ['http://localhost:5174']; // Vite 기본 주소
 
 if (in_array($origin, $allowed, true)) {
   header("Access-Control-Allow-Origin: $origin");
